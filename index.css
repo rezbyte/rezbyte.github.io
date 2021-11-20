@@ -1,0 +1,23 @@
+.flex-container {
+  display: flex;
+} 
+
+#sidebar {
+  flex: 10%;
+  justify-content: center;
+}
+
+.flex-item-right {
+  flex: 50%;
+}
+
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  } 
+}
+
+td > img {
+  width:25%;
+  height:25%;
+}
