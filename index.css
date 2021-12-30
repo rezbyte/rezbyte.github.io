@@ -4,7 +4,14 @@
 
 #sidebar {
   flex: 10%;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+#sidebar > a {
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
 }
 
 .flex-item-right {
