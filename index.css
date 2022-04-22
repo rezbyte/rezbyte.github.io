@@ -6,7 +6,10 @@
   flex: 10%;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  height: 100vh;
+  margin-right: 2em;
+  overflow: hidden;
 }
 
 #sidebar > a {
@@ -27,4 +30,16 @@
 td > img {
   width:25%;
   height:25%;
+}
+
+.section {
+  /* width: 100vw; */
+  height: 99vh;
+  border-bottom-width: 0.2em;
+  border-bottom-style: solid;
+  border-bottom-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
 }
