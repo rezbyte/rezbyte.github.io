@@ -3,7 +3,8 @@
 } 
 
 #sidebar {
-  flex: 10%;
+  display: flex;
+  flex-basis: 10vw;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
