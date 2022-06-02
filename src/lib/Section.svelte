@@ -1,4 +1,8 @@
-<div>
+<script lang="ts">
+  export let node: HTMLElement;
+</script>
+
+<div bind:this={node}>
   <slot />
 </div>
 
