@@ -23,7 +23,10 @@
   }
 
   figcaption {
-    display: none;
+    animation-name: slidedown;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -36,6 +39,26 @@
   }
 
   figure:hover > figcaption {
-    display: block;
+    animation-name: slideup;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes slideup {
+    from {
+      clip-path: inset(100% 0% 0% 0%);
+    }
+    to {
+      clip-path: inset(0% 0% 0% 0%);
+    }
+  }
+  @keyframes slidedown {
+    from {
+      clip-path: inset(0% 0% 0% 0%);
+    }
+    to {
+      clip-path: inset(100% 0% 0% 0%);
+    }
   }
 </style>
