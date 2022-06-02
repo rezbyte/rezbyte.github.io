@@ -91,7 +91,7 @@
     width: 100%;
     height: 1.5em;
     background-color: white;
-    color: white;
+    color: transparent;
     mix-blend-mode: difference;
     border-radius: 6%;
     animation-name: slideleft;
