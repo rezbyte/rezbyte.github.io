@@ -7,7 +7,7 @@
 
   function scrollTo(key: string) {
     return () => {
-      sections[key].scrollIntoView();
+      sections[key].scrollIntoView({ behavior: 'smooth' });
     };
   }
 </script>
