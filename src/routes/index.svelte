@@ -14,9 +14,13 @@
 
 <div class="wrapper">
   <Sidebar>
-    <a href="/" on:click|preventDefault={scrollTo('about-me')}>About me</a>
-    <a href="/" on:click|preventDefault={scrollTo('recent-projects')}>Recent Projects</a>
-    <a href="/" on:click|preventDefault={scrollTo('lets-connect')}>Let's Connect!</a>
+    <a href="/" class="sidebar-link" on:click|preventDefault={scrollTo('about-me')}>About me</a>
+    <a href="/" class="sidebar-link" on:click|preventDefault={scrollTo('recent-projects')}
+      >Recent Projects</a
+    >
+    <a href="/" class="sidebar-link" on:click|preventDefault={scrollTo('lets-connect')}
+      >Let's Connect!</a
+    >
   </Sidebar>
   <main>
     <section bind:this={sections['start']}>
@@ -73,5 +77,50 @@
     justify-content: center;
     align-content: center;
     scroll-snap-align: start;
+  }
+  .sidebar-link {
+    text-decoration: none;
+    background-color: white;
+    color: inherit;
+    border-radius: 6%;
+  }
+  .sidebar-link::after {
+    content: 'a';
+    position: absolute;
+    left: 0%;
+    width: 100%;
+    height: 1.5em;
+    background-color: white;
+    color: white;
+    mix-blend-mode: difference;
+    border-radius: 6%;
+    animation-name: slideleft;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+  }
+  .sidebar-link:hover::after {
+    animation-name: slideright;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes slideleft {
+    from {
+      clip-path: inset(0% 0% 0% 0%);
+    }
+    to {
+      clip-path: inset(0% 100% 0% 0%);
+    }
+  }
+
+  @keyframes slideright {
+    from {
+      clip-path: inset(0% 100% 0% 0%);
+    }
+    to {
+      clip-path: inset(0% 0% 0% 0%);
+    }
   }
 </style>
