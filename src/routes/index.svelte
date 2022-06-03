@@ -107,7 +107,5 @@
   footer {
     position: relative;
     bottom: 4vh;
-    text-align: center;
-    margin-right: 12.5vw;
   }
 </style>
