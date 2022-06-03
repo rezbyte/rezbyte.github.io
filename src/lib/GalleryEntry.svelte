@@ -19,8 +19,10 @@
   }
 
   figure > img {
-    max-width: 20em;
-    max-height: 15em;
+    width: 30em;
+    max-width: 95%;
+    height: 15em;
+    max-height: 95%;
   }
 
   figcaption {
