@@ -54,6 +54,16 @@
 </div>
 
 <style>
+  :global(body) {
+    background-color: black;
+    color: white;
+  }
+  @media (prefers-color-scheme: light) {
+    :global(body) {
+      background-color: white;
+      color: black;
+    }
+  }
   .wrapper {
     display: grid;
     grid-template-columns: 1fr 7fr;

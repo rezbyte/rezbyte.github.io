@@ -12,9 +12,15 @@
   }
   nav :global(a) {
     text-decoration: none;
-    background-color: white;
+    background-color: inherit;
     color: inherit;
     border-radius: 6%;
+  }
+  @media (prefers-color-scheme: light) {
+    nav :global(a) {
+      background-color: white;
+      color: black;
+    }
   }
   nav :global(a)::after {
     content: 'a';
@@ -53,6 +59,25 @@
     }
     to {
       clip-path: inset(0% 0% 0% 0%);
+    }
+  }
+  @media (prefers-color-scheme: light) {
+    @keyframes slideleft {
+      from {
+        clip-path: inset(0% 0% 0% 0%);
+      }
+      to {
+        clip-path: inset(0% 100% 0% 0%);
+      }
+    }
+
+    @keyframes slideright {
+      from {
+        clip-path: inset(0% 100% 0% 0%);
+      }
+      to {
+        clip-path: inset(0% 0% 0% 0%);
+      }
     }
   }
 </style>
