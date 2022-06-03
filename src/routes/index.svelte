@@ -44,7 +44,7 @@
       </GalleryEntry>
     </Gallery>
   </section>
-  <section bind:this={sections['lets-connect']}>
+  <section class="lets-connect" bind:this={sections['lets-connect']}>
     <h1>Let's Connect!</h1>
     <Gallery>
       <a class="social-media-logo" href="https://www.linkedin.com/in/rezbyte/"
@@ -54,10 +54,10 @@
         ><img src={GitHubLogo} alt="GitHub" /></a
       >
     </Gallery>
+    <footer>
+      <small>Made using <a href="https://kit.svelte.dev/">SvelteKit</a> 2021-2022</small>
+    </footer>
   </section>
-  <footer>
-    <small>Made using <a href="https://kit.svelte.dev/">SvelteKit</a> 2021-2022</small>
-  </footer>
 </main>
 
 <style>
@@ -72,6 +72,12 @@
     column-gap: 1em;
   }
 
+  @media (orientation: portrait) {
+    :global(body) {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+  }
   @media (prefers-color-scheme: light) {
     :global(body) {
       background-color: white;
@@ -86,6 +92,11 @@
     scroll-snap-type: y mandatory;
   }
 
+  @media (orientation: portrait) {
+    main {
+      grid-column: 1;
+    }
+  }
   section {
     height: 100vh;
     display: flex;
@@ -93,8 +104,25 @@
     justify-content: center;
     align-content: center;
     scroll-snap-align: start;
+    margin-top: auto;
+  }
+  @media (orientation: portrait) {
+    section {
+      padding: 1em;
+    }
   }
 
+  @media (orientation: portrait) {
+    .lets-connect {
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  .lets-connect > h1 {
+    margin-top: auto;
+  }
   .social-media-logo > img {
     height: 5em;
     width: 5em;
@@ -106,7 +134,6 @@
     }
   }
   footer {
-    position: relative;
-    bottom: 4vh;
+    margin-top: auto;
   }
 </style>

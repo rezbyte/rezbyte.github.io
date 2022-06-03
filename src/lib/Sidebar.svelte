@@ -11,6 +11,11 @@
     grid-row: auto;
     justify-content: center;
   }
+  @media (orientation: portrait) {
+    nav {
+      display: none;
+    }
+  }
   nav :global(a) {
     text-decoration: none;
     background-color: inherit;
