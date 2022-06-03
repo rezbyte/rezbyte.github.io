@@ -2,6 +2,8 @@
   import Gallery from '$lib/Gallery.svelte';
   import GalleryEntry from '$lib/GalleryEntry.svelte';
   import Sidebar from '$lib/Sidebar.svelte';
+  import LinkedInLogo from '$lib/assets/linkedin.svg';
+  import GitHubLogo from '$lib/assets/github.svg';
 
   let sections: { [key: string]: HTMLElement } = {};
 
@@ -45,8 +47,14 @@
     </section>
     <section bind:this={sections['lets-connect']}>
       <h1>Let's Connect!</h1>
-      <a href="https://www.linkedin.com/in/rezbyte/">LinkedIn</a>
-      <a href="https://github.com/rezbyte">GitHub</a>
+      <Gallery>
+        <a class="social-media-logo" href="https://www.linkedin.com/in/rezbyte/"
+          ><img src={LinkedInLogo} alt="LinkedIn" /></a
+        >
+        <a class="social-media-logo" href="https://github.com/rezbyte"
+          ><img src={GitHubLogo} alt="GitHub" /></a
+        >
+      </Gallery>
       <br />
       <small>Made from scratch in 2021</small>
     </section>
@@ -83,5 +91,14 @@
     justify-content: center;
     align-content: center;
     scroll-snap-align: start;
+  }
+  .social-media-logo > img {
+    height: 5em;
+    width: 5em;
+  }
+  @media (prefers-color-scheme: light) {
+    .social-media-logo > img {
+      filter: invert(100%);
+    }
   }
 </style>
