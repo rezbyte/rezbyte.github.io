@@ -69,6 +69,7 @@
     display: grid;
     grid-template-columns: 1fr 7fr;
     grid-template-rows: auto auto;
+    column-gap: 1em;
   }
 
   @media (prefers-color-scheme: light) {
