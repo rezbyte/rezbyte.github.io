@@ -6,15 +6,16 @@
   nav {
     display: flex;
     flex-direction: column;
-    position: fixed;
-    top: 50%;
-    left: 1em;
+    grid-column: 1;
+    grid-row: auto;
+    justify-content: center;
   }
   nav :global(a) {
     text-decoration: none;
     background-color: inherit;
     color: inherit;
     border-radius: 6%;
+    padding-left: 1em;
   }
   @media (prefers-color-scheme: light) {
     nav :global(a) {
@@ -23,11 +24,10 @@
     }
   }
   nav :global(a)::after {
-    content: 'a';
+    content: 'e';
     position: absolute;
-    left: 0%;
-    width: 100%;
-    height: 1.5em;
+    left: 1em;
+    width: 8em;
     background-color: white;
     color: transparent;
     mix-blend-mode: difference;
