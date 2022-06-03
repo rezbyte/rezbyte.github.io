@@ -6,9 +6,6 @@
   div {
     display: flex;
     flex-direction: row;
-  }
-
-  div > :global(:first-child) {
-    margin-left: 0em;
+    gap: 1em;
   }
 </style>

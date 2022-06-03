@@ -15,6 +15,7 @@
 <style>
   figure {
     position: relative;
+    margin: 0em;
   }
 
   figure > img {
@@ -30,12 +31,23 @@
     position: absolute;
     top: 0px;
     left: 0px;
-    padding: 1em;
+    padding: 0em;
     width: 100%;
     height: 100%;
     background: rgb(0, 0, 0); /* fallback color */
     background: rgba(0, 0, 0, 0.7);
     color: white;
+  }
+  figcaption > h1 {
+    margin-top: 0.5rem;
+    margin-bottom: 0rem;
+  }
+  figcaption > :global(*) {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  figcaption > :global(:last-child) {
+    margin-bottom: 0.5rem;
   }
 
   figure:hover > figcaption {
