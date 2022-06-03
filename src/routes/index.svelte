@@ -54,9 +54,10 @@
         ><img src={GitHubLogo} alt="GitHub" /></a
       >
     </Gallery>
-    <br />
-    <small>Made from scratch in 2021</small>
   </section>
+  <footer>
+    <small>Made using <a href="https://kit.svelte.dev/">SvelteKit</a> 2021-2022</small>
+  </footer>
 </main>
 
 <style>
@@ -102,5 +103,11 @@
     .social-media-logo > img {
       filter: invert(100%);
     }
+  }
+  footer {
+    position: relative;
+    bottom: 4vh;
+    text-align: center;
+    margin-right: 12.5vw;
   }
 </style>
