@@ -1,0 +1,53 @@
+{
+  ".svelte-kit/runtime/client/start.js": {
+    "file": "start-4a30ccdf.js",
+    "src": ".svelte-kit/runtime/client/start.js",
+    "isEntry": true,
+    "imports": [
+      "_index-e90cd18e.js"
+    ],
+    "dynamicImports": [
+      ".svelte-kit/runtime/components/layout.svelte",
+      ".svelte-kit/runtime/components/error.svelte",
+      "src/routes/index.svelte"
+    ]
+  },
+  ".svelte-kit/runtime/components/layout.svelte": {
+    "file": "layout.svelte-139e449c.js",
+    "src": ".svelte-kit/runtime/components/layout.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-e90cd18e.js"
+    ]
+  },
+  ".svelte-kit/runtime/components/error.svelte": {
+    "file": "error.svelte-73fae482.js",
+    "src": ".svelte-kit/runtime/components/error.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-e90cd18e.js"
+    ]
+  },
+  "src/routes/index.svelte": {
+    "file": "pages/index.svelte-aee038d5.js",
+    "src": "src/routes/index.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-e90cd18e.js"
+    ],
+    "css": [
+      "assets/pages/index.svelte-6844c007.css"
+    ],
+    "assets": [
+      "assets/linkedin-9b398771.svg",
+      "assets/github-16c6d277.svg",
+      "assets/Nunito-VariableFont_wght-2628eee9.ttf"
+    ]
+  },
+  "_index-e90cd18e.js": {
+    "file": "chunks/index-e90cd18e.js"
+  }
+}
