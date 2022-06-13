@@ -17,13 +17,13 @@ npm run dev -- --open
 ```
 
 # Deployment
-The `build` folder contains the deployed version.
+The `docs` folder contains the deployed version.
 
 To deploy the site, run:
 ```bash
 npm run build
 ```
-and commit the `build` folder to main.
+and commit the `docs` folder to main.
 
 # Credits
 Social media logos adapted from:
