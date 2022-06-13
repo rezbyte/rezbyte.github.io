@@ -1,8 +1,11 @@
 # rezbyte.github.io
 
-My personal portfolio powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+My personal portfolio built with [`svelte-kit`](https://kit.svelte.dev/).
 
-## Developing
+All styling done from scratch using CSS.
+No other frameworks or libraries used.
+
+# Developing
 
 Install the dependencies with `npm install`, start a development server:
 
@@ -13,11 +16,16 @@ npm run dev
 npm run dev -- --open
 ```
 
-## Deployment
+# Deployment
+The `build` folder contains the deployed version.
 
-To do
+To deploy the site, run:
+```bash
+npm run build
+```
+and commit the `build` folder to main.
 
 # Credits
 Social media logos adapted from:
-- LinkedIn logo vector from [SVGRepo,](https://www.svgrepo.com/svg/128403/linkedin) licensed under CC0.
-- GitHub logo vector by michaelampr from [SVGRepo,](https://www.svgrepo.com/svg/360450/github) licensed under MIT.
+- LinkedIn logo vector from [SVGRepo](https://www.svgrepo.com/svg/128403/linkedin), licensed under CC0.
+- GitHub logo vector by michaelampr from [SVGRepo](https://www.svgrepo.com/svg/360450/github), licensed under MIT.
