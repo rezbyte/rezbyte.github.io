@@ -2,11 +2,27 @@
   import fallbackImage from '/static/favicon.png';
   export let src: string = fallbackImage;
   export let title: string = 'Unknown';
+
+  let isOpen: boolean = false;
+  function open() {
+    isOpen = true;
+  }
+  function close() {
+    isOpen = false;
+  }
+
+  function toggle() {
+    if (isOpen) {
+      close();
+    } else {
+      open();
+    }
+  }
 </script>
 
-<figure>
+<figure on:mouseenter={() => open()} on:mouseleave={() => close()} on:click={() => toggle()}>
   <img {src} alt={title} />
-  <figcaption>
+  <figcaption class={isOpen ? 'opened' : 'closed'}>
     <h1>{title}</h1>
     <slot />
   </figcaption>
@@ -26,10 +42,6 @@
   }
 
   figcaption {
-    animation-name: slidedown;
-    animation-timing-function: ease-in-out;
-    animation-duration: 0.2s;
-    animation-fill-mode: forwards;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -52,13 +64,12 @@
     margin-bottom: 0.5rem;
   }
 
-  figure:hover > figcaption {
+  .opened {
     animation-name: slideup;
     animation-timing-function: ease-in-out;
     animation-duration: 0.2s;
     animation-fill-mode: forwards;
   }
-
   @keyframes slideup {
     from {
       clip-path: inset(100% 0% 0% 0%);
@@ -66,6 +77,13 @@
     to {
       clip-path: inset(0% 0% 0% 0%);
     }
+  }
+
+  .closed {
+    animation-name: slidedown;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
   }
   @keyframes slidedown {
     from {
