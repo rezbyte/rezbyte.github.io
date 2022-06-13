@@ -20,7 +20,7 @@
   }
 </script>
 
-<figure on:mouseenter={() => open()} on:mouseleave={() => close()} on:click={() => toggle()}>
+<figure on:mouseenter={() => open()} on:mouseleave={() => close()} on:touchstart={() => toggle()}>
   <img {src} alt={title} />
   <figcaption class={isOpen ? 'opened' : 'closed'}>
     <h1>{title}</h1>
