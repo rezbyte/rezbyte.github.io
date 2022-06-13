@@ -2,22 +2,17 @@
   import Gallery from '$lib/Gallery.svelte';
   import GalleryEntry from '$lib/GalleryEntry.svelte';
   import Sidebar from '$lib/Sidebar.svelte';
+  import SidebarLink from '$lib/SidebarLink.svelte';
   import LinkedInLogo from '$lib/assets/linkedin.svg';
   import GitHubLogo from '$lib/assets/github.svg';
 
   let sections: { [key: string]: HTMLElement } = {};
-
-  function scrollTo(key: string) {
-    return () => {
-      sections[key].scrollIntoView({ behavior: 'smooth' });
-    };
-  }
 </script>
 
 <Sidebar>
-  <a href="/" on:click|preventDefault={scrollTo('about-me')}>About me</a>
-  <a href="/" on:click|preventDefault={scrollTo('recent-projects')}>Recent Projects</a>
-  <a href="/" on:click|preventDefault={scrollTo('lets-connect')}>Let's Connect!</a>
+  <SidebarLink name="About Me" to={sections['about-me']} />
+  <SidebarLink name="Recent Projects" to={sections['recent-projects']} />
+  <SidebarLink name="Let's Connect!" to={sections['lets-connect']} />
 </Sidebar>
 <main>
   <section bind:this={sections['start']}>
