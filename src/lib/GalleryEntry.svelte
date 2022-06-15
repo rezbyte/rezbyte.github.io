@@ -1,9 +1,9 @@
 <script lang="ts">
   import fallbackImage from '/static/favicon.png';
   export let src: string = fallbackImage;
-  export let title: string = 'Unknown';
+  export let title = 'Unknown';
 
-  let isOpen: boolean = false;
+  let isOpen = false;
   function open() {
     isOpen = true;
   }

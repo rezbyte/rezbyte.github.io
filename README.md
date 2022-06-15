@@ -17,15 +17,20 @@ npm run dev -- --open
 ```
 
 # Deployment
+
 The `docs` folder contains the deployed version.
 
 To deploy the site, run:
+
 ```bash
 npm run build
 ```
+
 and commit the `docs` folder to main.
 
 # Credits
+
 Social media logos adapted from:
+
 - LinkedIn logo vector from [SVGRepo](https://www.svgrepo.com/svg/128403/linkedin), licensed under CC0.
 - GitHub logo vector by michaelampr from [SVGRepo](https://www.svgrepo.com/svg/360450/github), licensed under MIT.
