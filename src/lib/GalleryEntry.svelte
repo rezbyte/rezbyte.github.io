@@ -32,13 +32,16 @@
   figure {
     position: relative;
     margin: 0em;
-  }
-
-  figure > img {
     width: 30em;
     max-width: 95%;
     height: 15em;
     max-height: 95%;
+  }
+
+  figure > img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
   }
 
   figcaption {
