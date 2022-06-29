@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-812d4595.js",
+    "file": "start-1d85be7f.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -31,7 +31,7 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-c515f625.js",
+    "file": "pages/index.svelte-fb9fb9d2.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -39,12 +39,12 @@
       "_index-e90cd18e.js"
     ],
     "css": [
-      "assets/pages/index.svelte-4f912507.css"
+      "assets/pages/index.svelte-1a51c2b4.css"
     ],
     "assets": [
       "assets/linkedin-f872facd.svg",
       "assets/github-81581a7c.svg",
-      "assets/Nunito-VariableFont_wght-2628eee9.ttf"
+      "assets/Nunito-Light-74e08e37.woff2"
     ]
   },
   "_index-e90cd18e.js": {
