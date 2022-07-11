@@ -33,6 +33,12 @@
   <section bind:this={sections['recent-projects']}>
     <h1>Recent Projects</h1>
     <Gallery>
+      <GalleryEntry src="Elucidate.jpg" title="Elucidate">
+        <p>
+          ATAR study platform run by students for students. <br />
+          Created by Coders for Causes for ATAR Survival Guide.
+        </p>
+      </GalleryEntry>
       <GalleryEntry src="Thumbnail.jpg" title="My online portfolio" />
       <GalleryEntry src="WAIS-RGB.jpg" title="The Vault">
         <p>Pole vaulting data entry system for the Western Australian Institute of Sport.</p>
