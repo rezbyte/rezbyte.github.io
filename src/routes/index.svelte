@@ -39,7 +39,7 @@
           Created by Coders for Causes for ATAR Survival Guide.
         </p>
       </GalleryEntry>
-      <GalleryEntry src="Thumbnail.jpg" title="My online portfolio">
+      <GalleryEntry src="Portfolio.jpg" title="My online portfolio">
         <p>
           The very page you're on right now! <br /> A minimalist portfolio built from scratch using Svelte,
           plain CSS & HTML.
