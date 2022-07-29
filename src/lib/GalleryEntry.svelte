@@ -3,6 +3,13 @@
   export let src: string = fallbackImage;
   export let title = 'Unknown';
 
+  let touchmoved = false;
+  function handleTouch() {
+    if (touchmoved === false) {
+      toggle();
+    }
+  }
+
   let isOpen = false;
   function open() {
     isOpen = true;
@@ -20,7 +27,17 @@
   }
 </script>
 
-<figure on:mouseenter={() => open()} on:mouseleave={() => close()} on:touchstart={() => toggle()}>
+<figure
+  on:mouseenter={() => open()}
+  on:mouseleave={() => close()}
+  on:touchstart={() => {
+    touchmoved = false;
+  }}
+  on:touchmove={() => {
+    touchmoved = true;
+  }}
+  on:touchend={handleTouch}
+>
   <img {src} alt={title} />
   <figcaption class={isOpen ? 'opened' : 'closed'}>
     <h1>{title}</h1>
