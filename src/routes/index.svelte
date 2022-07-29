@@ -76,6 +76,7 @@
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
       U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   }
+
   :global(body) {
     font-family: 'Nunito', sans-serif;
     background-color: black;
@@ -94,6 +95,7 @@
       grid-template-rows: auto;
     }
   }
+
   @media (prefers-color-scheme: light) {
     :global(body) {
       background-color: white;
@@ -113,6 +115,7 @@
       grid-column: 1;
     }
   }
+
   section {
     height: 100vh;
     display: flex;
@@ -122,6 +125,7 @@
     scroll-snap-align: start;
     margin-top: auto;
   }
+
   @media (orientation: portrait) {
     section {
       padding-left: 1em;
@@ -137,9 +141,11 @@
       text-align: center;
     }
   }
+
   .lets-connect > h1 {
     margin-top: auto;
   }
+
   .social-media-logo > img {
     height: 5em;
     width: 5em;
@@ -150,6 +156,7 @@
       filter: invert(100%);
     }
   }
+
   footer {
     margin-top: auto;
   }

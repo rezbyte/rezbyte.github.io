@@ -13,12 +13,14 @@
     border-radius: 6%;
     padding-left: 1em;
   }
+
   @media (prefers-color-scheme: light) {
     a {
       background-color: white;
       color: black;
     }
   }
+
   a::after {
     content: 'e';
     position: absolute;
@@ -33,12 +35,14 @@
     animation-duration: 0.2s;
     animation-fill-mode: forwards;
   }
+
   a:hover::after {
     animation-name: slideright;
     animation-timing-function: ease-in-out;
     animation-duration: 0.2s;
     animation-fill-mode: forwards;
   }
+
   @keyframes slideleft {
     from {
       clip-path: inset(0% 0% 0% 0%);
@@ -56,6 +60,7 @@
       clip-path: inset(0% 0% 0% 0%);
     }
   }
+
   @media (prefers-color-scheme: light) {
     @keyframes slideleft {
       from {

@@ -11,6 +11,7 @@
     grid-row: auto;
     justify-content: center;
   }
+
   @media (orientation: portrait) {
     nav {
       display: none;

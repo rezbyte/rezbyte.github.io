@@ -55,14 +55,17 @@
     background: rgba(0, 0, 0, 0.7);
     color: white;
   }
+
   figcaption > h1 {
     margin-top: 0.5rem;
     margin-bottom: 0rem;
   }
+
   figcaption > :global(*) {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
   }
+
   figcaption > :global(:last-child) {
     margin-bottom: 0.5rem;
   }
@@ -73,6 +76,7 @@
     animation-duration: 0.2s;
     animation-fill-mode: forwards;
   }
+
   @keyframes slideup {
     from {
       clip-path: inset(100% 0% 0% 0%);
@@ -88,6 +92,7 @@
     animation-duration: 0.2s;
     animation-fill-mode: forwards;
   }
+
   @keyframes slidedown {
     from {
       clip-path: inset(0% 0% 0% 0%);
