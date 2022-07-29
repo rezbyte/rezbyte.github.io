@@ -49,10 +49,6 @@
   figure {
     position: relative;
     margin: 0em;
-    width: 30em;
-    max-width: 95%;
-    height: 15em;
-    max-height: 95%;
   }
 
   figure > img {
