@@ -128,8 +128,8 @@
 
   @media (orientation: portrait) {
     section {
-      padding-left: 1em;
-      padding-right: 1em;
+      margin-left: 1rem;
+      margin-right: 1rem;
     }
   }
 
