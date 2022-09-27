@@ -4,7 +4,6 @@ import preprocess from 'svelte-preprocess';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
   preprocess: preprocess(),
-
   kit: {
     adapter: adapter({
       pages: 'docs',
@@ -12,9 +11,6 @@ const config = {
       fallback: null,
       precompress: false
     }),
-    prerender: {
-      default: true
-    },
     paths: {
       base: ''
     }

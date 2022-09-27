@@ -20,11 +20,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="#" />
     <meta http-equiv="content-security-policy" content="">
-	<link rel="stylesheet" href="/_app/immutable/assets/index-734a80e2.css">
-	<link rel="modulepreload" href="/_app/immutable/start-a8c5c580.js">
-	<link rel="modulepreload" href="/_app/immutable/chunks/index-c5f595e7.js">
-	<link rel="modulepreload" href="/_app/immutable/layout.svelte-1e8b4c90.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/index.svelte-7e44bef4.js">
+		<link href="./_app/immutable/assets/_page-50f4a8b7.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/start-15720e96.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index-1d791e6e.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-2bdd3c56.js">
+		<link rel="modulepreload" href="./_app/immutable/components/layout.svelte-0ce8e413.js">
+		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.ts-b8ee4d7c.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-1daba58d.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/_page.svelte-fb846f53.js">
   </head>
 
   <body>
@@ -71,22 +74,24 @@
 
 
 		<script type="module" data-sveltekit-hydrate="1mh5sp8">
-		import { start } from "/_app/immutable/start-a8c5c580.js";
-		start({
-			target: document.querySelector('[data-sveltekit-hydrate="1mh5sp8"]').parentNode,
-			paths: {"base":"","assets":""},
-			session: {},
-			route: true,
-			spa: false,
-			trailing_slash: "never",
-			hydrate: {
-				status: 200,
-				error: null,
-				nodes: [0, 2],
-				params: {},
-				routeId: ""
-			}
-		});
-	</script>
+			import { start } from "./_app/immutable/start-15720e96.js";
+
+			start({
+				env: {},
+				hydrate: {
+					status: 200,
+					error: null,
+					node_ids: [0, 2],
+					params: {},
+					routeId: "",
+					data: (function(a){return [a,a]}(null)),
+					form: null
+				},
+				paths: {"base":"","assets":""},
+				target: document.querySelector('[data-sveltekit-hydrate="1mh5sp8"]').parentNode,
+				trailing_slash: "never"
+			});
+		</script>
+	
   </body>
 </html>
