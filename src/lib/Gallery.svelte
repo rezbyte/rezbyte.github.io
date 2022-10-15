@@ -8,7 +8,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 1em;
-    overflow-y: scroll;
+    overflow-y: auto;
     height: fit-content;
     width: fit-content;
     padding-top: 0.5rem;
