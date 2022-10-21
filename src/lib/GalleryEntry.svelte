@@ -1,5 +1,5 @@
 <script lang="ts">
-  import fallbackImage from '/static/favicon.png';
+  import fallbackImage from '/src/lib/assets/no-image.jpg';
   export let src: string = fallbackImage;
   export let title = 'Unknown';
 
