@@ -5,6 +5,7 @@
   import SidebarLink from '$lib/SidebarLink.svelte';
   import LinkedInLogo from '$lib/assets/linkedin.svg';
   import GitHubLogo from '$lib/assets/github.svg';
+  import StackOverflowLogo from '$lib/assets/stackoverflow.svg';
 
   let sections: { [key: string]: HTMLElement } = {};
 </script>
@@ -58,6 +59,9 @@
       >
       <a class="social-media-logo" href="https://github.com/rezbyte"
         ><img src={GitHubLogo} alt="GitHub" /></a
+      >
+      <a class="social-media-logo" href="https://stackoverflow.com/users/18584437/rezbyte"
+        ><img src={StackOverflowLogo} alt="Stack Overflow" /></a
       >
     </Gallery>
     <footer>

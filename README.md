@@ -30,7 +30,8 @@ and commit the `docs` folder to main.
 
 # Credits
 
-Social media logos adapted from:
+Social media logos:
 
 - LinkedIn logo vector from [SVGRepo](https://www.svgrepo.com/svg/128403/linkedin), licensed under CC0.
 - GitHub logo vector by michaelampr from [SVGRepo](https://www.svgrepo.com/svg/360450/github), licensed under MIT.
+- Stack Overflow logo vector by boxicons from [SVGRepo](https://www.svgrepo.com/svg/333608/stack-overflow), licensed under CC Attribution License.
