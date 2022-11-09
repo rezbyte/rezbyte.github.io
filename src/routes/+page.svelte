@@ -52,6 +52,7 @@
   <section class="lets-connect" bind:this={sections['lets-connect']}>
     <h1>Let's Connect!</h1>
     <Gallery>
+      <SquareLink href="mailto:contact@rezbyte.dev" />
       <SquareLink href="https://www.linkedin.com/in/rezbyte/" />
       <SquareLink href="https://github.com/rezbyte" />
       <SquareLink href="https://stackoverflow.com/users/18584437/rezbyte" />
