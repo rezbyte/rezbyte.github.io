@@ -1,8 +1,4 @@
 {
-  "src/lib/assets/linkedin.svg": {
-    "file": "_app/immutable/assets/linkedin-f872facd.svg",
-    "src": "src/lib/assets/linkedin.svg"
-  },
   "src/lib/assets/github.svg": {
     "file": "_app/immutable/assets/github-81581a7c.svg",
     "src": "src/lib/assets/github.svg"
@@ -11,17 +7,21 @@
     "file": "_app/immutable/assets/stackoverflow-7f34353e.svg",
     "src": "src/lib/assets/stackoverflow.svg"
   },
+  "src/lib/assets/linkedin.svg": {
+    "file": "_app/immutable/assets/linkedin-f872facd.svg",
+    "src": "src/lib/assets/linkedin.svg"
+  },
   "src/lib/assets/Nunito-Light.woff2": {
     "file": "_app/immutable/assets/Nunito-Light-74e08e37.woff2",
     "src": "src/lib/assets/Nunito-Light.woff2"
   },
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "_app/immutable/start-0dbb6231.js",
+    "file": "_app/immutable/start-0152ec76.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
       "_index-1d791e6e.js",
-      "_singletons-a7cfbda1.js"
+      "_singletons-460654e8.js"
     ],
     "dynamicImports": [
       ".svelte-kit/generated/nodes/0.js",
@@ -38,23 +38,23 @@
     ]
   },
   "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
-    "file": "_app/immutable/components/error.svelte-ef33c2d8.js",
+    "file": "_app/immutable/components/error.svelte-60da8aa9.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte",
     "isEntry": true,
     "imports": [
       "_index-1d791e6e.js",
-      "_singletons-a7cfbda1.js"
+      "_singletons-460654e8.js"
     ]
   },
   "src/routes/+page.svelte": {
-    "file": "_app/immutable/components/pages/_page.svelte-18b1a428.js",
+    "file": "_app/immutable/components/pages/_page.svelte-1702db40.js",
     "src": "src/routes/+page.svelte",
     "isEntry": true,
     "imports": [
       "_index-1d791e6e.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-7844c121.css"
+      "_app/immutable/assets/_page-b205c7c4.css"
     ],
     "assets": [
       "_app/immutable/assets/linkedin-f872facd.svg",
@@ -71,8 +71,8 @@
       "__layout-1daba58d.js"
     ]
   },
-  "_singletons-a7cfbda1.js": {
-    "file": "_app/immutable/chunks/singletons-a7cfbda1.js",
+  "_singletons-460654e8.js": {
+    "file": "_app/immutable/chunks/singletons-460654e8.js",
     "imports": [
       "_index-1d791e6e.js"
     ]
@@ -93,7 +93,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/1.js": {
-    "file": "_app/immutable/chunks/1-ba197e30.js",
+    "file": "_app/immutable/chunks/1-9f967e0d.js",
     "src": ".svelte-kit/generated/nodes/1.js",
     "isDynamicEntry": true,
     "imports": [
@@ -101,7 +101,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/2.js": {
-    "file": "_app/immutable/chunks/2-e581a722.js",
+    "file": "_app/immutable/chunks/2-c066398e.js",
     "src": ".svelte-kit/generated/nodes/2.js",
     "isDynamicEntry": true,
     "imports": [
@@ -109,7 +109,7 @@
     ]
   },
   "src/routes/+page.css": {
-    "file": "_app/immutable/assets/_page-7844c121.css",
+    "file": "_app/immutable/assets/_page-b205c7c4.css",
     "src": "src/routes/+page.css"
   }
 }

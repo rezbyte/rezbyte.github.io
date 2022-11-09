@@ -3,9 +3,7 @@
   import GalleryEntry from '$lib/GalleryEntry.svelte';
   import Sidebar from '$lib/Sidebar.svelte';
   import SidebarLink from '$lib/SidebarLink.svelte';
-  import LinkedInLogo from '$lib/assets/linkedin.svg';
-  import GitHubLogo from '$lib/assets/github.svg';
-  import StackOverflowLogo from '$lib/assets/stackoverflow.svg';
+  import SquareLink from '$lib/SquareLink.svelte';
 
   let sections: { [key: string]: HTMLElement } = {};
 </script>
@@ -54,15 +52,9 @@
   <section class="lets-connect" bind:this={sections['lets-connect']}>
     <h1>Let's Connect!</h1>
     <Gallery>
-      <a class="social-media-logo" href="https://www.linkedin.com/in/rezbyte/"
-        ><img src={LinkedInLogo} alt="LinkedIn" /></a
-      >
-      <a class="social-media-logo" href="https://github.com/rezbyte"
-        ><img src={GitHubLogo} alt="GitHub" /></a
-      >
-      <a class="social-media-logo" href="https://stackoverflow.com/users/18584437/rezbyte"
-        ><img src={StackOverflowLogo} alt="Stack Overflow" /></a
-      >
+      <SquareLink href="https://www.linkedin.com/in/rezbyte/" />
+      <SquareLink href="https://github.com/rezbyte" />
+      <SquareLink href="https://stackoverflow.com/users/18584437/rezbyte" />
     </Gallery>
     <footer>
       <small>Made using <a href="https://kit.svelte.dev/">SvelteKit</a> 2021-2022</small>
@@ -148,17 +140,6 @@
 
   .lets-connect > h1 {
     margin-top: auto;
-  }
-
-  .social-media-logo > img {
-    height: 5em;
-    width: 5em;
-  }
-
-  @media (prefers-color-scheme: light) {
-    .social-media-logo > img {
-      filter: invert(100%);
-    }
   }
 
   footer {
