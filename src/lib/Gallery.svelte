@@ -7,6 +7,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 1em;
     overflow-y: auto;
     height: fit-content;
