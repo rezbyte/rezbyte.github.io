@@ -54,6 +54,7 @@
     <Gallery>
       <SquareLink href="mailto:contact@rezbyte.dev" />
       <SquareLink href="https://www.linkedin.com/in/rezbyte/" />
+      <SquareLink href="https://www.xing.com/profile/Jamie_Turner10/cv" />
       <SquareLink href="https://github.com/rezbyte" />
       <SquareLink href="https://stackoverflow.com/users/18584437/rezbyte" />
     </Gallery>

@@ -3,12 +3,13 @@
   import GitHubLogo from '$lib/assets/github.svg';
   import StackOverflowLogo from '$lib/assets/stackoverflow.svg';
   import EmailLogo from '$lib/assets/email.svg';
+  import XingLogo from '$lib/assets/xing.svg';
 
   export let href: string;
 
   const siteName = getSiteName(href);
 
-  type site = 'Email' | 'LinkedIn' | 'GitHub' | 'Stack Overflow';
+  type site = 'Email' | 'LinkedIn' | 'Xing' | 'GitHub' | 'Stack Overflow';
 
   function getSiteName(link: string): site {
     const url = new URL(link);
@@ -21,6 +22,8 @@
         switch (hostname) {
           case 'linkedin.com':
             return 'LinkedIn';
+          case 'xing.com':
+            return 'Xing';
           case 'github.com':
             return 'GitHub';
           case 'stackoverflow.com':
@@ -39,6 +42,8 @@
         return EmailLogo;
       case 'LinkedIn':
         return LinkedInLogo;
+      case 'Xing':
+        return XingLogo;
       case 'GitHub':
         return GitHubLogo;
       case 'Stack Overflow':
