@@ -55,7 +55,7 @@
         </p>
       </GalleryEntry>
       <GalleryEntry
-        src="WAIS-RGB.jpg"
+        src="WAIS.jpg"
         title="The Vault"
         deployedLink="https://codersforcauses.org/projects/WAIS"
       >
@@ -65,7 +65,7 @@
   </section>
   <section class="lets-connect" bind:this={sections['lets-connect']}>
     <h1>Let's Connect!</h1>
-    <Gallery>
+    <Gallery center>
       <SquareLink href="mailto:contact@rezbyte.dev" />
       <SquareLink href="https://www.linkedin.com/in/rezbyte/" />
       <SquareLink href="https://www.xing.com/profile/Jamie_Turner10/cv" />
