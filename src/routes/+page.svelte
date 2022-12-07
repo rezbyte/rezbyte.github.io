@@ -32,19 +32,33 @@
   <section bind:this={sections['recent-projects']}>
     <h1>Recent Projects</h1>
     <Gallery>
-      <GalleryEntry src="Elucidate.jpg" title="Elucidate">
+      <GalleryEntry
+        src="Elucidate.jpg"
+        title="Elucidate"
+        deployedLink="https://elucidate-production.up.railway.app/"
+        repositoryLink="https://github.com/codersforcauses/elucidate"
+      >
         <p>
           ATAR study platform run by students for students. <br />
           Created by Coders for Causes for ATAR Survival Guide.
         </p>
       </GalleryEntry>
-      <GalleryEntry src="Portfolio.jpg" title="My online portfolio">
+      <GalleryEntry
+        src="Portfolio.jpg"
+        title="My online portfolio"
+        deployedLink="https://rezbyte.dev/"
+        repositoryLink="https://github.com/rezbyte/rezbyte.github.io"
+      >
         <p>
           The very page you're on right now! <br /> A minimalist portfolio built from scratch using Svelte,
           plain CSS & HTML.
         </p>
       </GalleryEntry>
-      <GalleryEntry src="WAIS-RGB.jpg" title="The Vault">
+      <GalleryEntry
+        src="WAIS-RGB.jpg"
+        title="The Vault"
+        deployedLink="https://codersforcauses.org/projects/WAIS"
+      >
         <p>Pole vaulting data entry system for the Western Australian Institute of Sport.</p>
       </GalleryEntry>
     </Gallery>

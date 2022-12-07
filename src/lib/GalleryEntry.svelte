@@ -2,6 +2,8 @@
   import fallbackImage from '/src/lib/assets/no-image.jpg';
   export let src: string = fallbackImage;
   export let title = 'Unknown';
+  export let deployedLink: string | undefined = undefined;
+  export let repositoryLink: string | undefined = undefined;
 
   let touchmoved = false;
   function handleTouch() {
@@ -42,6 +44,17 @@
   <figcaption class={isOpen ? 'opened' : 'closed'}>
     <h1>{title}</h1>
     <slot />
+    <div>
+      {#if deployedLink}
+        <a href={deployedLink}>Visit Site</a>
+      {/if}
+      {#if deployedLink && repositoryLink}
+        <span>-</span>
+      {/if}
+      {#if repositoryLink}
+        <a href={repositoryLink}>Repository</a>
+      {/if}
+    </div>
   </figcaption>
 </figure>
 
@@ -79,7 +92,14 @@
     margin-right: 0.5rem;
   }
 
-  figcaption > :global(:last-child) {
+  a {
+    color: white;
+  }
+
+  figcaption > :last-child {
+    position: absolute;
+    bottom: 0;
+    left: 0;
     margin-bottom: 0.5rem;
   }
 
