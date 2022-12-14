@@ -33,6 +33,17 @@
     <h1>Recent Projects</h1>
     <Gallery>
       <GalleryEntry
+        src="WADL.jpg"
+        title="WADL"
+        deployedLink="https://wadl.vercel.app/"
+        repositoryLink="https://github.com/codersforcauses/wadl"
+      >
+        <p>
+          A tool to run, manage & score debating competitions. <br />
+          Created by Coders for Causes for the Western Australian Debate League.
+        </p>
+      </GalleryEntry>
+      <GalleryEntry
         src="Elucidate.jpg"
         title="Elucidate"
         deployedLink="https://elucidate-production.up.railway.app/"
