@@ -84,7 +84,7 @@
       <SquareLink href="https://stackoverflow.com/users/18584437/rezbyte" />
     </Gallery>
     <footer>
-      <small>Made using <a href="https://kit.svelte.dev/">SvelteKit</a> 2021-2022</small>
+      <small>Made using <a href="https://kit.svelte.dev/">SvelteKit</a> 2021-2023</small>
     </footer>
   </section>
 </main>
