@@ -1,5 +1,5 @@
 <script lang="ts">
-  export let center: boolean = false;
+  export let center = false;
 </script>
 
 <div class={center ? 'center' : ''}>

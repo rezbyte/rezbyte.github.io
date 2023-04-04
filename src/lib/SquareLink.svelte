@@ -17,7 +17,7 @@
       case 'mailto:':
         return 'Email';
       case 'http:':
-      case 'https:':
+      case 'https:': {
         const hostname = url.hostname.replace('www.', '');
         switch (hostname) {
           case 'linkedin.com':
@@ -31,6 +31,7 @@
           default:
             throw new Error(`Unknown host name: ${hostname}`);
         }
+      }
       default:
         throw new Error(`Unknown protocol: ${url.protocol}`);
     }
