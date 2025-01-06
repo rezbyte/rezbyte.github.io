@@ -1,18 +1,29 @@
 <script lang="ts">
   import fallbackImage from '/src/lib/assets/no-image.jpg';
-  export let src: string = fallbackImage;
-  export let title = 'Unknown';
-  export let deployedLink: string | undefined = undefined;
-  export let repositoryLink: string | undefined = undefined;
+  interface Props {
+    src?: string;
+    title?: string;
+    deployedLink?: string | undefined;
+    repositoryLink?: string | undefined;
+    children?: import('svelte').Snippet;
+  }
 
-  let touchmoved = false;
+  let {
+    src = fallbackImage,
+    title = 'Unknown',
+    deployedLink = undefined,
+    repositoryLink = undefined,
+    children
+  }: Props = $props();
+
+  let touchmoved = $state(false);
   function handleTouch() {
     if (touchmoved === false) {
       toggle();
     }
   }
 
-  let isOpen = false;
+  let isOpen = $state(false);
   function open() {
     isOpen = true;
   }
@@ -30,20 +41,20 @@
 </script>
 
 <figure
-  on:mouseenter={() => open()}
-  on:mouseleave={() => close()}
-  on:touchstart={() => {
+  onmouseenter={() => open()}
+  onmouseleave={() => close()}
+  ontouchstart={() => {
     touchmoved = false;
   }}
-  on:touchmove={() => {
+  ontouchmove={() => {
     touchmoved = true;
   }}
-  on:touchend={handleTouch}
+  ontouchend={handleTouch}
 >
   <img {src} alt={title} />
   <figcaption class={isOpen ? 'opened' : 'closed'}>
     <h1>{title}</h1>
-    <slot />
+    {@render children?.()}
     <div>
       {#if deployedLink}
         <a href={deployedLink}>Visit Site</a>

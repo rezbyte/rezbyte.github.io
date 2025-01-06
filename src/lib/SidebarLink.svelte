@@ -1,9 +1,15 @@
 <script lang="ts">
-  export let to: HTMLElement;
-  export let name: string;
+  import { preventDefault } from 'svelte/legacy';
+
+  interface Props {
+    to: HTMLElement;
+    name: string;
+  }
+
+  let { to, name }: Props = $props();
 </script>
 
-<a href="/" on:click|preventDefault={() => to.scrollIntoView({ behavior: 'smooth' })}>{name}</a>
+<a href="/" onclick={preventDefault(() => to.scrollIntoView({ behavior: 'smooth' }))}>{name}</a>
 
 <style>
   a {

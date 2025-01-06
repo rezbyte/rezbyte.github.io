@@ -5,7 +5,7 @@
   import SidebarLink from '$lib/SidebarLink.svelte';
   import SquareLink from '$lib/SquareLink.svelte';
 
-  let sections: { [key: string]: HTMLElement } = {};
+  let sections: { [key: string]: HTMLElement } = $state({});
 </script>
 
 <Sidebar>

@@ -5,7 +5,11 @@
   import EmailLogo from '$lib/assets/email.svg';
   import XingLogo from '$lib/assets/xing.svg';
 
-  export let href: string;
+  interface Props {
+    href: string;
+  }
+
+  let { href }: Props = $props();
 
   const siteName = getSiteName(href);
 
