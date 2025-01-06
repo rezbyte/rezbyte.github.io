@@ -5,13 +5,22 @@
   import SidebarLink from '$lib/SidebarLink.svelte';
   import SquareLink from '$lib/SquareLink.svelte';
 
-  let sections: { [key: string]: HTMLElement } = $state({});
+  let sections: Record<string, HTMLElement> = $state({});
 </script>
 
 <Sidebar>
-  <SidebarLink name="About Me" to={sections['about-me']} />
-  <SidebarLink name="Recent Projects" to={sections['recent-projects']} />
-  <SidebarLink name="Let's Connect!" to={sections['lets-connect']} />
+  <SidebarLink
+    title="About Me"
+    to={sections['about-me']}
+  />
+  <SidebarLink
+    title="Recent Projects"
+    to={sections['recent-projects']}
+  />
+  <SidebarLink
+    title="Let's Connect!"
+    to={sections['lets-connect']}
+  />
 </Sidebar>
 <main>
   <section bind:this={sections['start']}>
@@ -22,8 +31,8 @@
     <h1>About Me</h1>
     <p>
       I enjoy solving problems in the field of computer science.<br />
-      I've been coding for over nine years & have had the pleasure of working with a variety of technologies.<br
-      />
+      I've been coding for over nine years & have had the pleasure of working with a variety of technologies.
+      <br />
       My knowledge spans from developing websites using Vue.js & Django to OpenGL & systems programming
       in C as well as game development with Unity & C#.<br />
       I'm also not too shabby with CI/CD solutions such as GitHub Actions as well.
@@ -33,10 +42,10 @@
     <h1>Recent Projects</h1>
     <Gallery>
       <GalleryEntry
-        src="WADL.jpg"
-        title="WADL"
         deployedLink="https://wadl.vercel.app/"
         repositoryLink="https://github.com/codersforcauses/wadl"
+        src="WADL.jpg"
+        title="WADL"
       >
         <p>
           A tool to run, manage & score debating competitions. <br />
@@ -44,10 +53,10 @@
         </p>
       </GalleryEntry>
       <GalleryEntry
-        src="Elucidate.jpg"
-        title="Elucidate"
         deployedLink="https://elucidate-production.up.railway.app/"
         repositoryLink="https://github.com/codersforcauses/elucidate"
+        src="Elucidate.jpg"
+        title="Elucidate"
       >
         <p>
           ATAR study platform run by students for students. <br />
@@ -55,10 +64,10 @@
         </p>
       </GalleryEntry>
       <GalleryEntry
-        src="Portfolio.jpg"
-        title="My online portfolio"
         deployedLink="https://rezbyte.dev/"
         repositoryLink="https://github.com/rezbyte/rezbyte.github.io"
+        src="Portfolio.jpg"
+        title="My online portfolio"
       >
         <p>
           The very page you're on right now! <br /> A minimalist portfolio built from scratch using Svelte,
@@ -66,15 +75,18 @@
         </p>
       </GalleryEntry>
       <GalleryEntry
+        deployedLink="https://codersforcauses.org/projects/WAIS"
         src="WAIS.jpg"
         title="The Vault"
-        deployedLink="https://codersforcauses.org/projects/WAIS"
       >
         <p>Pole vaulting data entry system for the Western Australian Institute of Sport.</p>
       </GalleryEntry>
     </Gallery>
   </section>
-  <section class="lets-connect" bind:this={sections['lets-connect']}>
+  <section
+    bind:this={sections['lets-connect']}
+    class="lets-connect"
+  >
     <h1>Let's Connect!</h1>
     <Gallery center>
       <SquareLink href="mailto:contact@rezbyte.dev" />

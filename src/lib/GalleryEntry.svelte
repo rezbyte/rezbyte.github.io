@@ -18,7 +18,7 @@
 
   let touchmoved = $state(false);
   function handleTouch() {
-    if (touchmoved === false) {
+    if (!touchmoved) {
       toggle();
     }
   }
@@ -41,17 +41,20 @@
 </script>
 
 <figure
-  onmouseenter={() => open()}
-  onmouseleave={() => close()}
-  ontouchstart={() => {
-    touchmoved = false;
-  }}
+  onmouseenter={() => { open(); }}
+  onmouseleave={() => { close(); }}
+  ontouchend={handleTouch}
   ontouchmove={() => {
     touchmoved = true;
   }}
-  ontouchend={handleTouch}
+  ontouchstart={() => {
+    touchmoved = false;
+  }}
 >
-  <img {src} alt={title} />
+  <img
+    alt={title}
+    {src}
+  />
   <figcaption class={isOpen ? 'opened' : 'closed'}>
     <h1>{title}</h1>
     {@render children?.()}

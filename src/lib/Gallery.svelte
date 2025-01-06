@@ -7,7 +7,7 @@
   let { center = false, children }: Props = $props();
 </script>
 
-<div class={center ? 'center' : ''}>
+<div class:center>
   {@render children?.()}
 </div>
 

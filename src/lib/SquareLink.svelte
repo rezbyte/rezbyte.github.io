@@ -58,7 +58,10 @@
 </script>
 
 <a {href}>
-  <img src={getSiteLogo(siteName)} alt={siteName} />
+  <img
+    alt={siteName}
+    src={getSiteLogo(siteName)}
+  />
 </a>
 
 <style>
