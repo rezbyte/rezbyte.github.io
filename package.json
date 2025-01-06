@@ -29,5 +29,9 @@
     "typescript": "5.0.3",
     "vite": "4.2.1"
   },
-  "type": "module"
+  "installConfig": {
+    "pnp": true
+  },
+  "type": "module",
+  "packageManager": "yarn@4.6.0"
 }

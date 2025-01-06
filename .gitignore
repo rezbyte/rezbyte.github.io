@@ -1,6 +1,9 @@
 .vscode
 .DS_Store
 node_modules
+.yarn/unplugged
+.pnp.cjs
+.pnp.loader.mjs
 /.svelte-kit
 /package
 .env
