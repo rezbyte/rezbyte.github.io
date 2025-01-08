@@ -24,6 +24,12 @@
     width: fit-content;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+    padding-right: 0.5em;
+  }
+  @media (orientation: portrait) {
+    div {
+      padding-right: 0;
+    }
   }
   .center {
     justify-content: center;
