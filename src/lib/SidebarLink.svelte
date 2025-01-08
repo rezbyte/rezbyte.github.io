@@ -22,7 +22,6 @@
     text-decoration: none;
     background-color: inherit;
     color: inherit;
-    border-radius: 6%;
     position: relative;
     width: calc(100% + 1ch);
   }
