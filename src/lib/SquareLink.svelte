@@ -65,7 +65,8 @@
 </a>
 
 <style>
-  img {
+  img,
+  a {
     height: 5em;
     width: 5em;
   }
