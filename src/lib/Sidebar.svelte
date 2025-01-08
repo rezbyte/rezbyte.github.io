@@ -18,6 +18,8 @@
     grid-column: 1;
     grid-row: auto;
     justify-content: center;
+    width: fit-content;
+    padding-left: 1em;
   }
 
   @media (orientation: portrait) {

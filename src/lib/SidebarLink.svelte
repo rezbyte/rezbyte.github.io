@@ -23,7 +23,8 @@
     background-color: inherit;
     color: inherit;
     border-radius: 6%;
-    padding-left: 1em;
+    position: relative;
+    width: calc(100% + 1ch);
   }
 
   @media (prefers-color-scheme: light) {
@@ -33,11 +34,11 @@
     }
   }
 
-  a::after {
-    content: 'e';
+  a::before {
+    content: '';
     position: absolute;
-    left: 1em;
-    width: 8em;
+    width: 100%;
+    height: 100%;
     background-color: white;
     color: transparent;
     mix-blend-mode: difference;
@@ -48,8 +49,8 @@
     animation-fill-mode: forwards;
   }
 
-  a:hover::after,
-  a:focus::after {
+  a:hover::before,
+  a:focus::before {
     animation-name: slideright;
     animation-timing-function: ease-in-out;
     animation-duration: 0.2s;
