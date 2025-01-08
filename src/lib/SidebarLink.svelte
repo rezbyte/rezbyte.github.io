@@ -48,7 +48,8 @@
     animation-fill-mode: forwards;
   }
 
-  a:hover::after {
+  a:hover::after,
+  a:focus::after {
     animation-name: slideright;
     animation-timing-function: ease-in-out;
     animation-duration: 0.2s;
