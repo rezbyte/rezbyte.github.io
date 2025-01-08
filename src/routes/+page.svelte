@@ -213,4 +213,8 @@
   footer {
     margin-top: auto;
   }
+
+  a:visited {
+    color: inherit;
+  }
 </style>
