@@ -124,6 +124,10 @@
     column-gap: 1em;
   }
 
+  :global(*:focus) {
+    outline: 0.186em dashed #bbbbbb;
+  }
+
   @media (orientation: portrait) {
     :global(body) {
       grid-template-columns: 1fr;
