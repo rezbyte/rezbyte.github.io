@@ -5,6 +5,10 @@
   }
 
   const { to, title }: Props = $props();
+
+  function addSlideLeft(event: { currentTarget: HTMLElement }) {
+    event.currentTarget.classList.add('slideleft');
+  }
 </script>
 
 <a
@@ -13,6 +17,8 @@
     event.preventDefault();
     to.scrollIntoView({ behavior: 'smooth' });
   }}
+  onfocus={addSlideLeft}
+  onpointerover={addSlideLeft}
 >
   {title}
 </a>
@@ -42,6 +48,10 @@
     color: transparent;
     mix-blend-mode: difference;
     border-radius: 6%;
+    clip-path: inset(0% 100% 0% 0%);
+  }
+
+  :global(.slideleft::before) {
     animation-name: slideleft;
     animation-timing-function: ease-in-out;
     animation-duration: 0.2s;
