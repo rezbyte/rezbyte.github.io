@@ -1,10 +1,12 @@
 <script lang="ts">
+  import type { Snippet } from 'svelte';
+
   interface Props {
     center?: boolean;
-    children?: import('svelte').Snippet;
+    children?: Snippet;
   }
 
-  let { center = false, children }: Props = $props();
+  const { center = false, children }: Props = $props();
 </script>
 
 <div class:center>

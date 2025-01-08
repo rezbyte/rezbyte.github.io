@@ -5,7 +5,7 @@
   import SidebarLink from '$lib/SidebarLink.svelte';
   import SquareLink from '$lib/SquareLink.svelte';
 
-  let sections: Record<string, HTMLElement> = $state({});
+  const sections: Record<string, HTMLElement> = $state({});
 </script>
 
 <Sidebar>

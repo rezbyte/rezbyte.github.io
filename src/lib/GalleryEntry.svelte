@@ -1,16 +1,17 @@
 <script lang="ts">
+  import type { Snippet } from 'svelte';
   import fallbackImage from '/src/lib/assets/no-image.jpg';
   interface Props {
     src?: string;
     title?: string;
-    deployedLink?: string | undefined;
-    repositoryLink?: string | undefined;
-    children?: import('svelte').Snippet;
+    deployedLink?: string;
+    repositoryLink?: string;
+    children?: Snippet;
   }
 
-  type CurrentTarget = EventTarget & Element;
+  type ElementTarget = EventTarget & Element;
 
-  let {
+  const {
     src = fallbackImage,
     title = 'Unknown',
     deployedLink = undefined,
@@ -19,7 +20,7 @@
   }: Props = $props();
 
   let touchmoved = $state(false);
-  function handleTouch(currentTarget: CurrentTarget) {
+  function handleTouch(currentTarget: ElementTarget) {
     if (!touchmoved) {
       toggle(currentTarget);
     }
@@ -29,14 +30,14 @@
   function open() {
     isOpen = true;
   }
-  function close(currentTarget: CurrentTarget) {
+  function close(currentTarget: ElementTarget) {
     // Don't close the caption if it is still being interacted with
     const isPointerInside = currentTarget.matches(':hover');
     const isFocusInside = currentTarget.contains(document.activeElement);
     isOpen = isPointerInside || isFocusInside;
   }
 
-  function toggle(currentTarget: CurrentTarget) {
+  function toggle(currentTarget: ElementTarget) {
     if (isOpen) {
       close(currentTarget);
     } else {
@@ -47,19 +48,19 @@
 
 <figure
   onfocusin={open}
-  onfocusout={(event: FocusEvent & { currentTarget: CurrentTarget }) => {
+  onfocusout={(event: FocusEvent & { currentTarget: ElementTarget }) => {
     // Close the caption if an element outside this `GalleryEntry` is focused
-    const target = event.relatedTarget as CurrentTarget | null;
+    const target = event.relatedTarget as ElementTarget | null;
     const isChildElement = event.currentTarget.contains(target);
     if (target == null || !isChildElement) {
       close(event.currentTarget);
     }
   }}
   onmouseenter={open}
-  onmouseleave={(event: MouseEvent & { currentTarget: CurrentTarget }) => {
+  onmouseleave={(event: MouseEvent & { currentTarget: ElementTarget }) => {
     close(event.currentTarget);
   }}
-  ontouchend={(event: TouchEvent & { currentTarget: CurrentTarget }) => {
+  ontouchend={(event: TouchEvent & { currentTarget: ElementTarget }) => {
     handleTouch(event.currentTarget);
   }}
   ontouchmove={() => {

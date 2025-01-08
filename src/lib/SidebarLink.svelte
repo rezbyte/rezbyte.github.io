@@ -4,7 +4,7 @@
     title: string;
   }
 
-  let { to, title }: Props = $props();
+  const { to, title }: Props = $props();
 </script>
 
 <a

@@ -9,7 +9,7 @@
     href: string;
   }
 
-  let { href }: Props = $props();
+  const { href }: Props = $props();
 
   const siteName = getSiteName(href);
 
