@@ -8,6 +8,8 @@
     children?: import('svelte').Snippet;
   }
 
+  type CurrentTarget = EventTarget & Element;
+
   let {
     src = fallbackImage,
     title = 'Unknown',
@@ -17,9 +19,9 @@
   }: Props = $props();
 
   let touchmoved = $state(false);
-  function handleTouch() {
+  function handleTouch(currentTarget: CurrentTarget) {
     if (!touchmoved) {
-      toggle();
+      toggle(currentTarget);
     }
   }
 
@@ -27,13 +29,16 @@
   function open() {
     isOpen = true;
   }
-  function close() {
-    isOpen = false;
+  function close(currentTarget: CurrentTarget) {
+    // Don't close the caption if it is still being interacted with
+    const isPointerInside = currentTarget.matches(':hover');
+    const isFocusInside = currentTarget.contains(document.activeElement);
+    isOpen = isPointerInside || isFocusInside;
   }
 
-  function toggle() {
+  function toggle(currentTarget: CurrentTarget) {
     if (isOpen) {
-      close();
+      close(currentTarget);
     } else {
       open();
     }
@@ -41,9 +46,22 @@
 </script>
 
 <figure
-  onmouseenter={() => { open(); }}
-  onmouseleave={() => { close(); }}
-  ontouchend={handleTouch}
+  onfocusin={open}
+  onfocusout={(event: FocusEvent & { currentTarget: CurrentTarget }) => {
+    // Close the caption if an element outside this `GalleryEntry` is focused
+    const target = event.relatedTarget as CurrentTarget | null;
+    const isChildElement = event.currentTarget.contains(target);
+    if (target == null || !isChildElement) {
+      close(event.currentTarget);
+    }
+  }}
+  onmouseenter={open}
+  onmouseleave={(event: MouseEvent & { currentTarget: CurrentTarget }) => {
+    close(event.currentTarget);
+  }}
+  ontouchend={(event: TouchEvent & { currentTarget: CurrentTarget }) => {
+    handleTouch(event.currentTarget);
+  }}
   ontouchmove={() => {
     touchmoved = true;
   }}
