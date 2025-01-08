@@ -42,6 +42,17 @@
     <h1>Recent Projects</h1>
     <Gallery>
       <GalleryEntry
+        deployedLink="https://app.tuta.com/"
+        repositoryLink="https://github.com/tutao/tutanota"
+        src="Tuta-Mail.jpg"
+        title="Tuta Mail"
+      >
+        <p>
+          A privacy-focused email provider that offers an open-source client. The client is
+          cross-platform and supports both desktop and mobile.
+        </p>
+      </GalleryEntry>
+      <GalleryEntry
         deployedLink="https://wadl.vercel.app/"
         repositoryLink="https://github.com/codersforcauses/wadl"
         src="WADL.jpg"
