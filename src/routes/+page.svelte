@@ -24,7 +24,7 @@
 </Sidebar>
 <main>
   <section bind:this={sections['start']}>
-    <h1>Hey, I'm Jamie!</h1>
+    <h1 class="greeting">Hey, I'm Jamie!</h1>
     <p>I'm a software developer from Perth, Western Australia</p>
   </section>
   <section bind:this={sections['about-me']}>
@@ -128,6 +128,16 @@
     outline: 0.186em dashed #bbbbbb;
   }
 
+  :global(h1) {
+    margin-top: 0;
+    margin-bottom: 0.2em;
+  }
+
+  :global(p) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
   @media (orientation: portrait) {
     :global(body) {
       grid-template-columns: 1fr;
@@ -153,6 +163,10 @@
     main {
       grid-column: 1;
     }
+  }
+
+  .greeting {
+    font-size: xx-large;
   }
 
   section {
